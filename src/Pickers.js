@@ -37,15 +37,17 @@ function App() {
 
   return (
     <div className="App">
+      {/* Chrome Picker is Main! */}
       <p>Chrome</p>
       <ChromePicker
         color={rgbColor}
         onChange={(color) => {
-          console.log(convertRgbToHex(rgbColor));
           setOpacity(color.rgb.a);
           setRgbColor(color.rgb);
         }}
       />
+
+      {/* All the other Pickers */}
       <p>Sketch</p>
       <SketchPicker />
       <p>EditableInput</p>
